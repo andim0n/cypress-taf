@@ -1,0 +1,18 @@
+{
+  "blockHosts": "www.google-analytics.com",
+  "projectId": "",
+  "defaultCommandTimeout": 10000,
+  "video": false,
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "chromeWebSecurity": false,
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  },
+  "env": {
+    "foo": "bar"
+  },
+  "pageLoadTimeout": 60000,
+  "testFiles": "**/*.{feature,features}"
+}
