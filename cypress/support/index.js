@@ -12,6 +12,7 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
+
 require('./commands')
 require('cypress-xpath')
 
@@ -20,7 +21,8 @@ Cypress.Screenshot.defaults({
 })
 
 const resizeObserverLoopErrRe = /^[^(ResizeObserver loop limit exceeded)]/
-Cypress.on('uncaught:exception', err => {
+
+Cypress.on('uncaught:exception', (err) => {
   /* returning false here prevents Cypress from failing the test */
   if (resizeObserverLoopErrRe.test(err.message)) {
     cy.log(err)

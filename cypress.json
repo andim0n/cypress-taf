@@ -1,18 +1,36 @@
 {
+  "testFiles": "**/*.feature",
+  "integrationFolder": "./cypress",
   "blockHosts": "www.google-analytics.com",
-  "projectId": "",
-  "defaultCommandTimeout": 10000,
-  "video": false,
-  "viewportWidth": 1280,
-  "viewportHeight": 720,
+  "pluginsFile": "cypress/plugins/index.js",
+  "supportFile": "cypress/support/index.js",
   "chromeWebSecurity": false,
+  "video": false,
+  "videosFolder": "./cypress/videos",
+  "screenshotsFolder": "./cypress/reports/screenshots",
+  "viewportWidth": 1600,
+  "viewportHeight": 900,
+  "modifyObstructiveCode": false,
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 60000,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports/separate-reports",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "env": {
+    "local": {
+      "baseUrl": "https://www.google.com/"
+    },
+    "some-env": {
+      "baseUrl": "https://www.google.com/",
+      "supplierUrl": "someurl"
+    }
+  },
   "retries": {
     "runMode": 2,
     "openMode": 0
-  },
-  "env": {
-    "foo": "bar"
-  },
-  "pageLoadTimeout": 60000,
-  "testFiles": "**/*.{feature,features}"
+  }
 }
